@@ -68,7 +68,7 @@ def best_aligment(s1,s2,input):
     j       = input.shape[1]-1
     aligment1 = []
     aligment2 = []
-    while(i>0 and j>0):
+    while(i>0 or j>0):
         if(input[i][j] == "diagonal"):
             i -= 1
             j -= 1
@@ -88,8 +88,8 @@ def best_aligment(s1,s2,input):
 
      
 blosum62_matrix     = blosum62()
-sequence1           = "SEND"
-sequence2           = "AND"
+sequence1           = "MNALQM"
+sequence2           = "NALMSQA"
 
 
 score_matrix        = pd.DataFrame(matrix(sequence1,sequence2)[0],
